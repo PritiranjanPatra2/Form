@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h3>Personal Details</h3>
+    <form action="/submit">
+        <label for="salutation">Salutation</label>
+        <select name="salutation" id="salutation">
+            <option value="mr">Mr</option>
+            <option value="ms">Mrs</option>
+        </select>
+        <label for="firstname">First Name</label>
+        <input type="text" placeholder="Enter your first name" name="firstname" id="firstname">
+        <label for="lastname">Last Name</label>
+        <input type="text" placeholder="Enter your last name" name="lastname" id="lastname">
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="Male">Male
+        <input type="radio" name="gender" id="Female">Female
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="5"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
